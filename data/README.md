@@ -4,7 +4,7 @@
 xxxは地点コード,*は機器の種類.
 (G:GPS波浪計, W:沿岸波浪計, T:潮位計)
 
-データは[ナウファス]("https://nowphas.mlit.go.jp/pastdata/#contents3")より取得.
+データは[ナウファス](https://nowphas.mlit.go.jp/pastdata/#contents3)より取得.
 
 `FileList20110517.txt`:各地点コードの説明が書かれたテキストファイル.
 
