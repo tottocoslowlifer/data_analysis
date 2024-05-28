@@ -1,5 +1,5 @@
 # dataについて
-## tsunamiフォルダ
+## tsunami/NOWPHAS_Tsunami_data
 #### rawフォルダ
 `2011TETxxx*.txt`,:各地点での波浪をまとめたテキストデータ.
 xxxは地点コード,*は機器の種類.
