@@ -24,8 +24,8 @@ def df_create(filename) -> pd.DataFrame:
         df.loc[i, "datetime"] = dt.strptime(s, "%Y%m%d%H%M%S")
     df = df.drop(["date", "time"], axis=1)
 
-    start = df[df["datetime"] == dt(2011, 3, 11, 14, 30, 00)].index[0]
-    end = df[df["datetime"] == dt(2011, 3, 12, 00, 00, 00)].index[0]
+    start = df[df["datetime"] == dt(2011, 3, 11, 15, 00, 00)].index[0]
+    end = df[df["datetime"] == dt(2011, 3, 11, 17, 00, 00)].index[0]
 
     cut_df = df.iloc[start:end].reset_index()
     return cut_df
@@ -51,6 +51,7 @@ def null_cnt(dir_path, filenames):
 def main():
     filename_path = "../data/tsunami/NOWPHAS_Tsunami_data"
     csv_filenames = get_file_data(filename_path+"/csv")
+    csv_filenames.remove("cmp_csv")
     csv_filenames.remove("cut_csv")
 
     for file in csv_filenames:
