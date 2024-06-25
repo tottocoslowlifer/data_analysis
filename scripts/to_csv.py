@@ -40,12 +40,18 @@ def txt_csv_converter(filename, writer):
 def main():
     filename_path = "../data/tsunami/NOWPHAS_Tsunami_data"
     filenames = get_file_data(filename_path+"/raw")
+    csv_path = filename_path + "/csv"
 
-    for filename in filenames:
-        csv_file = filename_path + "/csv/" + filename[:11] + ".csv"
-        with open(csv_file, mode="w", newline="") as fw:
-            writer = csv.writer(fw, delimiter=",")
-            txt_csv_converter(filename_path+"/raw/"+filename, writer)
+    if os.path.isdir(csv_path):
+        for filename in filenames:
+            csv_file = csv_path + "/" + filename[:11] + ".csv"
+            with open(csv_file, mode="w", newline="") as fw:
+                writer = csv.writer(fw, delimiter=",")
+                txt_csv_converter(filename_path+"/raw/"+filename, writer)
+    else:
+        os.mkdir(csv_path)
+        print("Exceptional Error:")
+        print(f"{csv_path} is not found")
 
 
 if __name__ == '__main__':

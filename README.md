@@ -19,4 +19,17 @@
 pip3 install -r requirements.txt
 ~~~
 
-2. `data/raw`内の各テキストファイルをダウンロードする.
+2. `data/tsunami/NOWPHAS_Tsunami_data/raw`内の各テキストファイルをダウンロードする.
+
+3. `scripts`上で以下のコマンドを順に入力する.
+~~~
+python3 to_csv.py
+~~~
+~~~
+python3 df_create.py
+~~~
+~~~
+python3 cmp_df.py
+~~~
+
+4. `notebook`内の各ファイルをダウンロードし,実行する.

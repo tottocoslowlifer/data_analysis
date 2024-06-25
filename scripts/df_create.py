@@ -51,12 +51,17 @@ def null_cnt(dir_path, filenames):
 def main():
     filename_path = "../data/tsunami/NOWPHAS_Tsunami_data"
     csv_filenames = get_file_data(filename_path+"/csv")
-    csv_filenames.remove("cmp_csv")
-    csv_filenames.remove("cut_csv")
 
-    for file in csv_filenames:
-        file_df = df_create(filename_path+"/csv/"+file)
-        file_df.to_csv(filename_path+"/csv/cut_csv/"+f"cut_{file}")
+    csv_path = filename_path + "/cut_csv"
+
+    if os.path.isdir(csv_path):
+        for file in csv_filenames:
+            file_df = df_create(filename_path+"/csv/"+file)
+            file_df.to_csv(csv_path+"/"+f"cut_{file}")
+    else:
+        os.mkdir(csv_path)
+        print("Exceptional Error:")
+        print(f"{csv_path} is not found")
 
 
 if __name__ == '__main__':
