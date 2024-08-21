@@ -38,7 +38,7 @@ def txt_csv_converter(filename, writer):
 
 
 def main():
-    filename_path = "../data/tsunami/NOWPHAS_Tsunami_data"
+    filename_path = "../../data/tsunami/NOWPHAS_Tsunami_data"
     filenames = get_file_data(filename_path+"/raw")
     csv_path = filename_path + "/csv"
 
@@ -46,7 +46,7 @@ def main():
         pass
     else:
         os.mkdir(csv_path)
-    
+
     for filename in filenames:
         csv_file = csv_path + "/" + filename[:11] + ".csv"
         with open(csv_file, mode="w", newline="") as fw:

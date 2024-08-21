@@ -1,0 +1,35 @@
+{
+    "model_type": "NeuralNetwork",
+    "log": {
+        "log_file": "NeuralNetwork.log",
+        "log_formatter": "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+    },
+    "params": {
+        "test_size_1": 0.3,
+        "test_size_2": 0.5,
+        "input_dim": 21,
+        "output_dim": 1,
+        "first_dim": 32,
+        "second_dim": 2,
+        "slope": 0.01,
+        "lr": 0.01,
+        "epochs": 100
+    },
+    "dataloader_params": {
+        "batch_size": 16,
+        "shuffle": false,
+        "sampler": null,
+        "batch_sampler": null,
+        "num_workers": 0,
+        "collate_fn": null,
+        "pin_memory": false,
+        "drop_last": false,
+        "timeout": 0,
+        "worker_init_fn": null,
+        "prefetch_factor": null,
+        "persistent_workers": false,
+        "pin_memory_device": ""
+    },
+    "seed": 316,
+    "data_path": "../data/tsunami/NOWPHAS_Tsunami_data/full.csv"
+}

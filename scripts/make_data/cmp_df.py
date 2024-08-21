@@ -42,8 +42,8 @@ def df_completion(pre_df: pd.DataFrame) -> pd.DataFrame:
 
 
 def main():
-    cmp_filename_path = "../data/tsunami/NOWPHAS_Tsunami_data/cmp_csv"
-    filename_path = "../data/tsunami/NOWPHAS_Tsunami_data/cut_csv"
+    cmp_filename_path = "../../data/tsunami/NOWPHAS_Tsunami_data/cmp_csv"
+    filename_path = "../../data/tsunami/NOWPHAS_Tsunami_data/cut_csv"
     df_list = get_file_data(filename_path)
 
     if os.path.isdir(cmp_filename_path):

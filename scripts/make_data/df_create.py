@@ -49,7 +49,7 @@ def null_cnt(dir_path, filenames):
 
 
 def main():
-    filename_path = "../data/tsunami/NOWPHAS_Tsunami_data"
+    filename_path = "../../data/tsunami/NOWPHAS_Tsunami_data"
     csv_filenames = get_file_data(filename_path+"/csv")
 
     csv_path = filename_path + "/cut_csv"
