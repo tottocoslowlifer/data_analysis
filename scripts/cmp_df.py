@@ -47,14 +47,14 @@ def main():
     df_list = get_file_data(filename_path)
 
     if os.path.isdir(cmp_filename_path):
-        for file in df_list:
-            df = pd.read_csv(filename_path+"/"+file, index_col=0)
-            df = df_completion(df)
-            df.to_csv(cmp_filename_path+"/"+file)
+        pass
     else:
         os.mkdir(cmp_filename_path)
-        print("Exceptional Error:")
-        print(f"{cmp_filename_path} is not found")
+    
+    for file in df_list:
+        df = pd.read_csv(filename_path+"/"+file, index_col=0)
+        df = df_completion(df)
+        df.to_csv(cmp_filename_path+"/"+file)
 
 
 if __name__ == '__main__':

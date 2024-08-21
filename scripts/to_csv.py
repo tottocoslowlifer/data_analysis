@@ -43,15 +43,15 @@ def main():
     csv_path = filename_path + "/csv"
 
     if os.path.isdir(csv_path):
-        for filename in filenames:
-            csv_file = csv_path + "/" + filename[:11] + ".csv"
-            with open(csv_file, mode="w", newline="") as fw:
-                writer = csv.writer(fw, delimiter=",")
-                txt_csv_converter(filename_path+"/raw/"+filename, writer)
+        pass
     else:
         os.mkdir(csv_path)
-        print("Exceptional Error:")
-        print(f"{csv_path} is not found")
+    
+    for filename in filenames:
+        csv_file = csv_path + "/" + filename[:11] + ".csv"
+        with open(csv_file, mode="w", newline="") as fw:
+            writer = csv.writer(fw, delimiter=",")
+            txt_csv_converter(filename_path+"/raw/"+filename, writer)
 
 
 if __name__ == '__main__':

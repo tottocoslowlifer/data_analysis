@@ -55,13 +55,13 @@ def main():
     csv_path = filename_path + "/cut_csv"
 
     if os.path.isdir(csv_path):
-        for file in csv_filenames:
-            file_df = df_create(filename_path+"/csv/"+file)
-            file_df.to_csv(csv_path+"/"+f"cut_{file}")
+        pass
     else:
         os.mkdir(csv_path)
-        print("Exceptional Error:")
-        print(f"{csv_path} is not found")
+    
+    for file in csv_filenames:
+        file_df = df_create(filename_path+"/csv/"+file)
+        file_df.to_csv(csv_path+"/"+f"cut_{file}")
 
 
 if __name__ == '__main__':
